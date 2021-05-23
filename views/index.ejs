@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('layout/head.ejs') %>
+  <body>
+    <%- include('layout/header.ejs') %>
+
+    <div class="main">
+      <div>
+        <h2>All Usa Jobs</h2>
+        <% usaData.forEach(element => { %>
+        <h2>title: <%= element.title %></h2>
+        <p>company: <%= element.company %></p>
+        <p>location: <%= element.location %></p>
+        <p>url :<%= element.url %></p>
+        <% }) %>
+      </div>
+    </div>
+
+    <%- include('layout/footer.ejs') %>
+  </body>
+</html>

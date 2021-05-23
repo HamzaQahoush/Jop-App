@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layout/head.ejs') %>
+  <body>
+    <%- include('../layout/header.ejs') %>
+
+    <div class="main">
+      <div class="card">
+        <% dataBase.forEach(item=>{ %>
+
+        <h2>title: <%= item.title %></h2>
+        <p>company: <%= item.company %></p>
+        <p>location: <%= item.location %></p>
+        <p>url :<%= item.url %></p>
+        <form action="/details/<%= item.id %>" method="GET">
+          <button>View Details</button>
+        </form>
+        <%}) %>
+      </div>
+    </div>
+
+    <%- include('../layout/footer.ejs') %>
+  </body>
+</html>
